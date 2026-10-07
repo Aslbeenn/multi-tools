@@ -1,1 +1,123 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="تواصل مع فريق أدواتي."><title>تواصل معنا | أدواتي</title><link rel="stylesheet" href="style.css"></head><body><main class="content article-page"><a class="text-link" href="index.html">← العودة إلى الموقع</a><section style="margin-top:22px"><span class="eyebrow">تواصل معنا</span><h1>نرحب بملاحظاتك</h1><p class="lead">إذا وجدت مشكلة في إحدى الأدوات أو لديك اقتراح لأداة جديدة، يمكنك التواصل معنا وإرسال تفاصيل المشكلة أو الفكرة.</p></section><section><h2>إرسال رسالة</h2><form action="https://formspree.io/f/xeojnrjr" method="POST" style="display:grid;gap:14px;max-width:720px"><label>الاسم<input type="text" name="name" required placeholder="اكتب اسمك"></label><label>البريد الإلكتروني<input type="email" name="email" required placeholder="example@email.com"></label><label>الموضوع<input type="text" name="subject" required placeholder="موضوع الرسالة"></label><label>الرسالة<textarea name="message" rows="7" required placeholder="اكتب رسالتك هنا..."></textarea></label><button type="submit" class="primary-btn">إرسال الرسالة</button></form></section><section><h2>ماذا تذكر في رسالتك؟</h2><ul><li>اسم الأداة التي واجهت مشكلة فيها.</li><li>نوع الجهاز والمتصفح إذا كانت المشكلة تقنية.</li><li>خطوات إعادة المشكلة، إن أمكن.</li><li>اقتراحك أو طلبك بشكل واضح.</li></ul></section><section><h2>اقتراحات الأدوات</h2><p>نراجع الاقتراحات لتحسين الموقع وإضافة أدوات عملية جديدة. نفضّل الأفكار التي تحل مشكلة واضحة ويمكن تنفيذها بطريقة بسيطة وآمنة.</p></section></main></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="تواصل مع فريق أدواتي لإرسال ملاحظاتك، الإبلاغ عن مشكلة أو اقتراح أداة جديدة.">
+<title>تواصل معنا | أدواتي</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-page{max-width:1050px;margin:auto}
+.contact-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch;margin-top:24px}
+.contact-intro,.contact-card,.contact-info{border:1px solid var(--line);background:var(--panel);border-radius:20px;box-shadow:var(--shadow-sm)}
+.contact-intro{padding:34px;position:relative;overflow:hidden;background:linear-gradient(145deg,#eef2ff 0%,#fff 58%,#f8fafc 100%)}
+.contact-intro:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(99,102,241,.10);left:-75px;bottom:-115px}
+.contact-intro>*{position:relative;z-index:1}
+.contact-intro h1{font-size:34px;line-height:1.35;margin:12px 0 12px;font-weight:900}
+.contact-intro p{font-size:13px;line-height:2;color:var(--muted);max-width:680px}
+.contact-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.contact-badge{padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid #e0e7ff;color:#4f46e5;font-size:10px;font-weight:700}
+.contact-info{padding:26px;display:flex;flex-direction:column;justify-content:center}
+.contact-info .info-icon{width:46px;height:46px;border-radius:14px;background:#eef2ff;color:#4f46e5;display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.contact-info h2{font-size:18px;margin:0 0 8px}
+.contact-info p{font-size:11px;line-height:1.9;color:var(--muted);margin:0}
+.contact-form-section{margin-top:22px;padding:28px}
+.contact-form-section h2{font-size:21px;margin:0 0 7px}
+.contact-form-section>.form-subtitle{font-size:11px;color:var(--muted);margin:0 0 22px}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-field{display:flex;flex-direction:column;gap:7px}
+.contact-field.full{grid-column:1/-1}
+.contact-field label{font-size:11px;font-weight:800;color:var(--text)}
+.contact-field input,.contact-field textarea{width:100%;box-sizing:border-box;border:1px solid var(--line);background:var(--soft);color:var(--text);border-radius:12px;padding:13px 14px;font:inherit;font-size:12px;outline:none;transition:border-color .18s,box-shadow .18s,background .18s}
+.contact-field textarea{min-height:170px;resize:vertical;line-height:1.8}
+.contact-field input::placeholder,.contact-field textarea::placeholder{color:#9aa2b1}
+.contact-field input:focus,.contact-field textarea:focus{border-color:#818cf8;box-shadow:0 0 0 4px rgba(99,102,241,.10);background:var(--panel)}
+.contact-actions{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:2px}
+.contact-note{font-size:9px;color:var(--muted);line-height:1.7}
+.contact-submit{border:0;border-radius:11px;padding:12px 22px;background:#4f46e5;color:#fff;font:inherit;font-size:11px;font-weight:800;cursor:pointer;box-shadow:0 8px 18px rgba(79,70,229,.22);transition:transform .18s,box-shadow .18s}
+.contact-submit:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(79,70,229,.28)}
+.contact-submit:active{transform:translateY(0)}
+.contact-tips{margin-top:22px;padding:26px}
+.contact-tips h2{font-size:19px;margin:0 0 16px}
+.contact-tips-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.contact-tip{padding:16px;border:1px solid var(--line);background:var(--soft);border-radius:14px}
+.contact-tip strong{display:block;font-size:11px;margin-bottom:7px}
+.contact-tip span{display:block;font-size:9px;color:var(--muted);line-height:1.8}
+.dark .contact-intro{background:linear-gradient(145deg,#1d2240 0%,#151820 65%,#13161d 100%)}
+.dark .contact-badge{background:#202452;border-color:#30366b;color:#a5b4fc}
+.dark .contact-info .info-icon{background:#202452;color:#a5b4fc}
+.dark .contact-submit{background:#6366f1}
+@media(max-width:700px){
+.contact-hero{grid-template-columns:1fr}
+.contact-intro{padding:26px 21px}.contact-intro h1{font-size:28px}
+.contact-form-section,.contact-tips{padding:21px 17px}
+.contact-form{grid-template-columns:1fr}.contact-field.full{grid-column:auto}.contact-actions{grid-column:auto;flex-direction:column-reverse;align-items:stretch}
+.contact-submit{width:100%;padding:13px}
+.contact-note{text-align:center}
+.contact-tips-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:430px){.contact-tips-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="content article-page contact-page">
+<a class="text-link" href="index.html">← العودة إلى الموقع</a>
+
+<div class="contact-hero">
+<section class="contact-intro">
+<span class="eyebrow">تواصل معنا</span>
+<h1>يسعدنا أن نسمع منك</h1>
+<p>هل وجدت مشكلة في إحدى الأدوات؟ لديك اقتراح أو فكرة جديدة؟ أرسل لنا رسالتك وسنراجعها بعناية.</p>
+<div class="contact-badges">
+<span class="contact-badge">💡 اقتراحات</span>
+<span class="contact-badge">🛠️ مشاكل تقنية</span>
+<span class="contact-badge">💬 ملاحظات</span>
+</div>
+</section>
+
+<section class="contact-info">
+<div class="info-icon">✉️</div>
+<h2>أرسل رسالتك مباشرة</h2>
+<p>استخدم النموذج وسنستلم رسالتك عبر البريد الإلكتروني. اكتب تفاصيل واضحة حتى نتمكن من مساعدتك بشكل أفضل.</p>
+</section>
+</div>
+
+<section class="contact-card contact-form-section">
+<h2>إرسال رسالة</h2>
+<p class="form-subtitle">املأ الحقول التالية، ثم اضغط على «إرسال الرسالة».</p>
+<form class="contact-form" action="https://formspree.io/f/xeojnrjr" method="POST">
+<div class="contact-field">
+<label for="name">الاسم</label>
+<input id="name" type="text" name="name" autocomplete="name" required placeholder="اكتب اسمك">
+</div>
+<div class="contact-field">
+<label for="email">البريد الإلكتروني</label>
+<input id="email" type="email" name="email" autocomplete="email" required placeholder="example@email.com">
+</div>
+<div class="contact-field full">
+<label for="subject">الموضوع</label>
+<input id="subject" type="text" name="subject" required placeholder="مثلاً: مشكلة في أداة ضغط الصور">
+</div>
+<div class="contact-field full">
+<label for="message">الرسالة</label>
+<textarea id="message" name="message" required placeholder="اكتب تفاصيل رسالتك هنا..."></textarea>
+</div>
+<div class="contact-actions">
+<span class="contact-note">🔒 لن نطلب منك كلمة مرور أو معلومات مالية عبر هذا النموذج.</span>
+<button class="contact-submit" type="submit">إرسال الرسالة ←</button>
+</div>
+</form>
+</section>
+
+<section class="contact-card contact-tips">
+<h2>كيف تساعدنا على فهم رسالتك؟</h2>
+<div class="contact-tips-grid">
+<div class="contact-tip"><strong>🧰 اسم الأداة</strong><span>اذكر اسم الأداة التي تتحدث عنها.</span></div>
+<div class="contact-tip"><strong>📱 جهازك</strong><span>اذكر الهاتف أو الكمبيوتر والمتصفح عند وجود مشكلة تقنية.</span></div>
+<div class="contact-tip"><strong>🔎 التفاصيل</strong><span>صف ما حدث والخطوات التي أدت إلى المشكلة.</span></div>
+<div class="contact-tip"><strong>💡 اقتراحك</strong><span>اكتب فكرتك أو طلبك بشكل واضح ومختصر.</span></div>
+</div>
+</section>
+</main>
+</body>
+</html>
