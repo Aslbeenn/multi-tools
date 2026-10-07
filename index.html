@@ -1,68 +1,39 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="أدواتي — مجموعة أدوات مجانية وسريعة تعمل مباشرة في المتصفح.">
-<meta name="theme-color" content="#6d5dfc">
-<title>أدواتي | أدوات مجانية وسريعة</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="أدواتي — أدوات مجانية وسريعة للنصوص والصور والأرقام والمطورين.">
+<meta name="theme-color" content="#111318">
+<title>أدواتي — أدوات مجانية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="bg-orb orb-one"></div><div class="bg-orb orb-two"></div>
-<header class="header">
-  <div class="wrap nav">
-    <a class="logo" href="#" aria-label="أدواتي"><span class="logo-mark">✦</span><span>أدواتي</span></a>
-    <nav class="nav-links"><a href="#tools">الأدوات</a><a href="#about">لماذا نحن؟</a></nav>
-    <button id="themeBtn" class="icon-btn" aria-label="تبديل الوضع" title="تبديل الوضع">☾</button>
-  </div>
+<div class="app">
+<aside class="sidebar">
+  <a class="brand" href="#"><span class="brand-icon">✦</span><span>أدواتي</span></a>
+  <div class="side-label">الأدوات</div>
+  <nav id="sideNav"></nav>
+  <div class="sidebar-bottom"><button id="themeBtn" class="side-btn">◐ <span>المظهر</span><small>☾</small></button><div class="privacy-note">🔒 <span>تعمل الأدوات محليًا<br>ولا ترفع ملفاتك</span></div></div>
+</aside>
+<div class="main">
+<header class="topbar">
+  <button id="mobileMenu" class="mobile-menu" aria-label="القائمة">☰</button>
+  <div class="top-search"><span>⌕</span><input id="search" autocomplete="off" placeholder="ابحث عن أداة..."><kbd>Ctrl K</kbd></div>
+  <button id="topTheme" class="top-icon" aria-label="الوضع الداكن">☾</button>
 </header>
-<main>
-<section class="hero wrap">
-  <div class="hero-copy">
-    <span class="badge"><span class="pulse"></span> مجاني • سريع • بدون تسجيل</span>
-    <h1>أدوات ذكية<br><span>لإنجازك اليومي</span></h1>
-    <p>مجموعة أدوات عملية للنصوص والصور والأرقام والمطورين، تعمل مباشرة على جهازك بدون رفع ملفاتك.</p>
-    <div class="search" role="search"><span>⌕</span><input id="search" autocomplete="off" placeholder="ابحث عن أداة مثل: PDF، JSON، صورة..."><kbd>Ctrl K</kbd></div>
-    <div class="quick-links"><a href="#tools">استكشف الأدوات <span>←</span></a><span class="privacy">🔒 ملفاتك تبقى على جهازك</span></div>
-  </div>
-  <div class="hero-card">
-    <div class="hero-card-top"><span>لوحة الأدوات</span><span class="live-dot">● مباشر</span></div>
-    <div class="mini-grid">
-      <div><b>12+</b><small>أداة مجانية</small></div><div><b>0</b><small>رفع للخادم</small></div>
-      <div><b>∞</b><small>استخدامات</small></div><div><b>⚡</b><small>استجابة فورية</small></div>
-    </div>
-    <div class="mini-line"><span></span><span></span><span></span><span></span></div>
-    <p>كل ما تحتاجه في مكان واحد</p>
-  </div>
-</section>
-
-<section id="tools" class="tools-section wrap">
-  <div class="section-head">
-    <div><span class="eyebrow">مكتبة الأدوات</span><h2>اختر أداة وابدأ فورًا</h2></div>
-    <div class="result-count" id="resultCount"></div>
-  </div>
-  <div class="filters" id="filters"></div>
-  <div id="toolsGrid" class="grid"></div>
-  <div id="emptyState" class="empty hidden"><div>🔎</div><h3>لم نجد هذه الأداة</h3><p>جرّب كلمة بحث أخرى أو اختر تصنيفًا مختلفًا.</p></div>
-</section>
-
-<section id="about" class="about wrap">
-  <div><span class="eyebrow">مصمم للخصوصية</span><h2>بسيط، سريع، وبدون تعقيد</h2><p>الأدوات تعمل داخل متصفحك مباشرة. لا تحتاج إلى حساب، ولا تحتاج إلى تثبيت برنامج.</p></div>
-  <div class="features"><div><span>⚡</span><b>سريع</b><small>نتائج فورية</small></div><div><span>🔐</span><b>خاص</b><small>معالجة محلية</small></div><div><span>📱</span><b>متجاوب</b><small>هاتف وكمبيوتر</small></div></div>
-</section>
+<main class="content">
+  <div class="page-head"><div><div class="breadcrumb">الرئيسية / الأدوات</div><h1>الأدوات</h1><p>أدوات بسيطة لإنجاز المهام اليومية بسرعة.</p></div><div class="tool-total" id="resultCount"></div></div>
+  <div id="mobileFilters" class="mobile-filters"></div>
+  <section id="toolsGrid" class="grid"></section>
+  <div id="emptyState" class="empty hidden"><strong>لا توجد نتائج</strong><span>جرّب كلمة بحث مختلفة.</span></div>
+  <section class="privacy-card"><div class="privacy-icon">🔐</div><div><b>خصوصيتك أولًا</b><p>معظم الأدوات تعالج البيانات مباشرة داخل متصفحك. لا تحتاج إلى إنشاء حساب أو إرسال ملفاتك إلى خادم.</p></div></section>
 </main>
-<footer><div class="wrap footer-inner"><div><span class="logo-mark">✦</span> أدواتي</div><span>© 2026 أدواتي — جميع الأدوات تعمل محليًا في المتصفح.</span></div></footer>
-
-<div id="modal" class="modal hidden" aria-hidden="true">
- <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <button id="close" class="close" aria-label="إغلاق">×</button>
-  <div class="dialog-head"><span id="modalIcon"></span><div><span class="eyebrow">أداة</span><h2 id="modalTitle"></h2></div></div>
-  <div id="modalBody"></div>
- </div>
+<footer><span>© 2026 أدواتي</span><span>مجاني • سريع • بدون تسجيل</span></footer>
 </div>
+</div>
+<div id="mobileOverlay" class="overlay hidden"></div>
+<div id="modal" class="modal hidden" aria-hidden="true"><div class="dialog" role="dialog" aria-modal="true"><button id="close" class="close">×</button><div class="dialog-head"><span id="modalIcon"></span><div><small>أداة</small><h2 id="modalTitle"></h2></div></div><div id="modalBody"></div></div></div>
 <script src="app.js"></script>
 </body></html>
