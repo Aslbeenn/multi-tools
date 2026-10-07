@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="أدواتي: مجموعة مجانية من الأدوات العملية للنصوص والصور والأرقام والمطورين، تعمل مباشرة من المتصفح.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="أدواتي: أدوات مجانية وسريعة للنصوص والصور والأرقام والمطورين، مع شروحات عملية وأمثلة تساعدك على إنجاز مهامك مباشرة من المتصفح.">
 <meta name="theme-color" content="#2563eb">
-<title>أدواتي | أدوات مجانية أونلاين</title>
+<link rel="canonical" href="https://aslbeenn.github.io/multi-tools/">
+<title>أدواتي | أدوات مجانية وسريعة للاستخدام اليومي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -14,23 +16,56 @@
 <aside class="sidebar">
 <a class="brand" href="index.html"><span class="brand-icon">✦</span><span>أدواتي</span></a>
 <div class="side-label">الأدوات</div><nav id="sideNav"></nav>
-<div class="sidebar-bottom"><button id="themeBtn" class="side-btn">◐ <span>المظهر</span><small>☾</small></button><div class="privacy-note">🔒 <span>الأدوات تعالج بياناتك<br>محليًا في المتصفح.</span></div></div>
+<div class="sidebar-bottom">
+<a class="side-btn side-link" href="guides.html">▤ <span>الدليل والشروحات</span></a>
+<button id="themeBtn" class="side-btn">◐ <span>المظهر</span><small>☾</small></button>
+<div class="privacy-note">🔒 <span>الأدوات التي تتعامل مع الملفات تعمل محليًا في متصفحك.</span></div>
+</div>
 </aside>
 <div class="main">
-<header class="topbar"><button id="mobileMenu" class="mobile-menu" aria-label="فتح القائمة">☰</button><div class="top-search"><span>⌕</span><input id="search" autocomplete="off" placeholder="ابحث عن أداة..." aria-label="البحث عن أداة"><kbd>Ctrl K</kbd></div><button id="topTheme" class="top-icon" aria-label="تبديل المظهر">☾</button></header>
+<header class="topbar"><button id="mobileMenu" class="mobile-menu" aria-label="فتح القائمة">☰</button><div class="top-search"><span>⌕</span><input id="search" autocomplete="off" placeholder="ابحث عن أداة..." aria-label="البحث عن أداة"><kbd>Ctrl K</kbd></div><a class="top-link" href="guides.html">الشروحات</a><button id="topTheme" class="top-icon" aria-label="تبديل المظهر">☾</button></header>
 <main class="content">
-<section class="welcome"><div><span class="eyebrow">مجانية • سريعة • بدون تسجيل</span><h1>أدوات عملية لإنجاز مهامك اليومية</h1><p>مجموعة من الأدوات الصغيرة والمفيدة للنصوص والصور والأرقام والمطورين. صُممت لتكون واضحة وسهلة الاستخدام وتعمل مباشرة داخل متصفحك.</p></div></section>
-<div class="page-head"><div><div class="breadcrumb">الرئيسية / الأدوات</div><h2>كل الأدوات</h2><p>اختر أداة وابدأ مباشرة.</p></div><div class="tool-total" id="resultCount"></div></div>
+<section class="hero-pro">
+<div class="hero-copy">
+<span class="eyebrow">مجانية • بدون تسجيل • مصممة للسرعة</span>
+<h1>أنجز المهمة، ثم تابع يومك.</h1>
+<p>أدوات عملية للنصوص والصور والأرقام والمطورين، مع واجهة بسيطة وشروحات تساعدك على معرفة الأداة المناسبة بسرعة.</p>
+<div class="hero-actions"><a class="hero-primary" href="#tools">استكشف الأدوات <span>←</span></a><a class="hero-secondary" href="guides.html">اقرأ الشروحات</a></div>
+<div class="hero-trust"><span>✓ تعمل مباشرة في المتصفح</span><span>✓ واجهة متجاوبة</span><span>✓ لا تحتاج إلى حساب</span></div>
+</div>
+<div class="hero-card"><div class="hero-card-top"><span>أدواتي</span><span class="status-dot">● جاهز</span></div><div class="mini-tool"><b>JSON</b><span>تنسيق وتحقيق صحة البيانات</span><strong>{ }</strong></div><div class="mini-tool"><b>صور</b><span>ضغط الصور بسرعة</span><strong>▧</strong></div><div class="mini-tool"><b>نصوص</b><span>كلمات وأحرف وجمل</span><strong>T</strong></div></div>
+</section>
+
+<section id="tools" class="section-block">
+<div class="section-heading"><div><span class="section-kicker">الأدوات</span><h2>كل ما تحتاجه في مكان واحد</h2><p>اختر أداة من القائمة أو استخدم البحث للوصول إليها فورًا.</p></div><div class="tool-total" id="resultCount"></div></div>
 <div id="mobileFilters" class="mobile-filters"></div><section id="toolsGrid" class="grid"></section>
 <div id="emptyState" class="empty hidden"><strong>لا توجد نتائج</strong><span>جرّب كلمة بحث مختلفة.</span></div>
-<section class="info-grid">
-<div class="info-card"><div class="info-icon">⚡</div><h3>سريع وبسيط</h3><p>واجهات خفيفة تركز على المهمة بدل الإعلانات أو التعقيد.</p></div>
-<div class="info-card"><div class="info-icon">🔐</div><h3>خصوصيتك مهمة</h3><p>الأدوات التي تتعامل مع الملفات تعالجها محليًا في متصفحك ولا تحتاج إلى رفعها إلى خادم.</p></div>
-<div class="info-card"><div class="info-icon">📱</div><h3>يعمل على أجهزتك</h3><p>تصميم متجاوب للاستخدام على الهاتف والكمبيوتر واللوحي.</p></div>
 </section>
-<section class="about-strip"><div><span class="eyebrow">لماذا أدواتي؟</span><h2>أدوات مفيدة بدون خطوات غير ضرورية</h2><p>نطوّر أدوات صغيرة لحل مشكلات يومية متكررة. هدف الموقع هو تقديم وظائف واضحة، مجانية، وسهلة الوصول مع احترام خصوصية المستخدم.</p></div><a class="text-link" href="about.html">اعرف المزيد ←</a></section>
+
+<section class="value-section">
+<div class="value-intro"><span class="section-kicker">لماذا أدواتي؟</span><h2>ليست مجرد أدوات؛ بل طريقة أسرع لإنجاز المهام الصغيرة.</h2><p>نركز على الأدوات التي يحتاجها الناس فعلًا: نتيجة واضحة، خطوات قليلة، وتجربة مناسبة للهاتف والكمبيوتر.</p></div>
+<div class="value-grid">
+<div class="value-card"><span>01</span><h3>واضحة من أول نظرة</h3><p>كل أداة تشرح وظيفتها قبل أن تبدأ، بدون واجهات مربكة أو خطوات مخفية.</p></div>
+<div class="value-card"><span>02</span><h3>خصوصية أفضل</h3><p>معالجة الصور والنصوص تتم داخل المتصفح عندما تسمح طبيعة الأداة بذلك، بدل رفع الملفات بلا حاجة.</p></div>
+<div class="value-card"><span>03</span><h3>مفيدة وليست للزينة</h3><p>نضيف أدوات لحالات استخدام حقيقية، ونشرح متى ولماذا تستخدم كل أداة.</p></div>
+</div>
+</section>
+
+<section class="guide-promo">
+<div><span class="section-kicker">دليل الأدوات</span><h2>لا تعرف أي أداة تناسبك؟</h2><p>اقرأ الشروحات المختصرة، الأمثلة، ونصائح الاستخدام قبل اختيار الأداة.</p></div>
+<a class="hero-primary" href="guides.html">فتح الدليل ←</a>
+</section>
+
+<section class="faq-section">
+<div class="section-heading"><div><span class="section-kicker">أسئلة شائعة</span><h2>قبل أن تبدأ</h2></div></div>
+<div class="faq-grid">
+<details><summary>هل أحتاج إلى إنشاء حساب؟</summary><p>لا. الأدوات الحالية متاحة مباشرة من الموقع بدون تسجيل.</p></details>
+<details><summary>هل يتم رفع ملفاتي؟</summary><p>الأدوات التي تعالج الملفات، مثل ضغط الصور وتحويلها، مصممة للعمل محليًا داخل المتصفح.</p></details>
+<details><summary>هل الموقع مناسب للهاتف؟</summary><p>نعم، الواجهة متجاوبة ومصممة للاستخدام على الهاتف واللوحي والكمبيوتر.</p></details>
+</div>
+</section>
 </main>
-<footer><div><b>أدواتي</b><span> أدوات مجانية للاستخدام اليومي.</span></div><nav><a href="about.html">من نحن</a><a href="privacy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="contact.html">تواصل معنا</a></nav><small>© 2026 أدواتي</small></footer>
+<footer><div><b>أدواتي</b><span> أدوات مجانية للاستخدام اليومي.</span></div><nav><a href="guides.html">الدليل</a><a href="about.html">من نحن</a><a href="privacy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="contact.html">تواصل معنا</a></nav><small>© 2026 أدواتي</small></footer>
 </div></div>
 <div id="mobileOverlay" class="overlay hidden"></div>
 <div id="modal" class="modal hidden" aria-hidden="true"><div class="dialog" role="dialog" aria-modal="true"><button id="close" class="close" aria-label="إغلاق">×</button><div class="dialog-head"><span id="modalIcon"></span><div><small>أداة</small><h2 id="modalTitle"></h2></div></div><div id="modalBody"></div></div></div>
