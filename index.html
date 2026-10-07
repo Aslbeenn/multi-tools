@@ -2,38 +2,37 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="أدواتي — أدوات مجانية وسريعة للنصوص والصور والأرقام والمطورين.">
-<meta name="theme-color" content="#111318">
-<title>أدواتي — أدوات مجانية</title>
+<meta name="description" content="أدواتي: مجموعة مجانية من الأدوات العملية للنصوص والصور والأرقام والمطورين، تعمل مباشرة من المتصفح.">
+<meta name="theme-color" content="#2563eb">
+<title>أدواتي | أدوات مجانية أونلاين</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
 <aside class="sidebar">
-  <a class="brand" href="#"><span class="brand-icon">✦</span><span>أدواتي</span></a>
-  <div class="side-label">الأدوات</div>
-  <nav id="sideNav"></nav>
-  <div class="sidebar-bottom"><button id="themeBtn" class="side-btn">◐ <span>المظهر</span><small>☾</small></button><div class="privacy-note">🔒 <span>تعمل الأدوات محليًا<br>ولا ترفع ملفاتك</span></div></div>
+<a class="brand" href="index.html"><span class="brand-icon">✦</span><span>أدواتي</span></a>
+<div class="side-label">الأدوات</div><nav id="sideNav"></nav>
+<div class="sidebar-bottom"><button id="themeBtn" class="side-btn">◐ <span>المظهر</span><small>☾</small></button><div class="privacy-note">🔒 <span>الأدوات تعالج بياناتك<br>محليًا في المتصفح.</span></div></div>
 </aside>
 <div class="main">
-<header class="topbar">
-  <button id="mobileMenu" class="mobile-menu" aria-label="القائمة">☰</button>
-  <div class="top-search"><span>⌕</span><input id="search" autocomplete="off" placeholder="ابحث عن أداة..."><kbd>Ctrl K</kbd></div>
-  <button id="topTheme" class="top-icon" aria-label="الوضع الداكن">☾</button>
-</header>
+<header class="topbar"><button id="mobileMenu" class="mobile-menu" aria-label="فتح القائمة">☰</button><div class="top-search"><span>⌕</span><input id="search" autocomplete="off" placeholder="ابحث عن أداة..." aria-label="البحث عن أداة"><kbd>Ctrl K</kbd></div><button id="topTheme" class="top-icon" aria-label="تبديل المظهر">☾</button></header>
 <main class="content">
-  <div class="page-head"><div><div class="breadcrumb">الرئيسية / الأدوات</div><h1>الأدوات</h1><p>أدوات بسيطة لإنجاز المهام اليومية بسرعة.</p></div><div class="tool-total" id="resultCount"></div></div>
-  <div id="mobileFilters" class="mobile-filters"></div>
-  <section id="toolsGrid" class="grid"></section>
-  <div id="emptyState" class="empty hidden"><strong>لا توجد نتائج</strong><span>جرّب كلمة بحث مختلفة.</span></div>
-  <section class="privacy-card"><div class="privacy-icon">🔐</div><div><b>خصوصيتك أولًا</b><p>معظم الأدوات تعالج البيانات مباشرة داخل متصفحك. لا تحتاج إلى إنشاء حساب أو إرسال ملفاتك إلى خادم.</p></div></section>
+<section class="welcome"><div><span class="eyebrow">مجانية • سريعة • بدون تسجيل</span><h1>أدوات عملية لإنجاز مهامك اليومية</h1><p>مجموعة من الأدوات الصغيرة والمفيدة للنصوص والصور والأرقام والمطورين. صُممت لتكون واضحة وسهلة الاستخدام وتعمل مباشرة داخل متصفحك.</p></div></section>
+<div class="page-head"><div><div class="breadcrumb">الرئيسية / الأدوات</div><h2>كل الأدوات</h2><p>اختر أداة وابدأ مباشرة.</p></div><div class="tool-total" id="resultCount"></div></div>
+<div id="mobileFilters" class="mobile-filters"></div><section id="toolsGrid" class="grid"></section>
+<div id="emptyState" class="empty hidden"><strong>لا توجد نتائج</strong><span>جرّب كلمة بحث مختلفة.</span></div>
+<section class="info-grid">
+<div class="info-card"><div class="info-icon">⚡</div><h3>سريع وبسيط</h3><p>واجهات خفيفة تركز على المهمة بدل الإعلانات أو التعقيد.</p></div>
+<div class="info-card"><div class="info-icon">🔐</div><h3>خصوصيتك مهمة</h3><p>الأدوات التي تتعامل مع الملفات تعالجها محليًا في متصفحك ولا تحتاج إلى رفعها إلى خادم.</p></div>
+<div class="info-card"><div class="info-icon">📱</div><h3>يعمل على أجهزتك</h3><p>تصميم متجاوب للاستخدام على الهاتف والكمبيوتر واللوحي.</p></div>
+</section>
+<section class="about-strip"><div><span class="eyebrow">لماذا أدواتي؟</span><h2>أدوات مفيدة بدون خطوات غير ضرورية</h2><p>نطوّر أدوات صغيرة لحل مشكلات يومية متكررة. هدف الموقع هو تقديم وظائف واضحة، مجانية، وسهلة الوصول مع احترام خصوصية المستخدم.</p></div><a class="text-link" href="about.html">اعرف المزيد ←</a></section>
 </main>
-<footer><span>© 2026 أدواتي</span><span>مجاني • سريع • بدون تسجيل</span></footer>
-</div>
-</div>
+<footer><div><b>أدواتي</b><span> أدوات مجانية للاستخدام اليومي.</span></div><nav><a href="about.html">من نحن</a><a href="privacy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="contact.html">تواصل معنا</a></nav><small>© 2026 أدواتي</small></footer>
+</div></div>
 <div id="mobileOverlay" class="overlay hidden"></div>
-<div id="modal" class="modal hidden" aria-hidden="true"><div class="dialog" role="dialog" aria-modal="true"><button id="close" class="close">×</button><div class="dialog-head"><span id="modalIcon"></span><div><small>أداة</small><h2 id="modalTitle"></h2></div></div><div id="modalBody"></div></div></div>
+<div id="modal" class="modal hidden" aria-hidden="true"><div class="dialog" role="dialog" aria-modal="true"><button id="close" class="close" aria-label="إغلاق">×</button><div class="dialog-head"><span id="modalIcon"></span><div><small>أداة</small><h2 id="modalTitle"></h2></div></div><div id="modalBody"></div></div></div>
 <script src="app.js"></script>
 </body></html>
