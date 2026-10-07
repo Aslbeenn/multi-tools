@@ -42,3 +42,11 @@ body.dark{--bg:#0b0d12;--panel:#13161d;--soft:#1b1f28;--line:#272c37;--text:#f5f
 html,body{overflow-x:hidden}
 @media (max-width:900px){.sidebar{right:0;left:auto;top:0;bottom:0;width:min(290px,86vw);height:100dvh;transform:translateX(105%);transition:transform .25s ease;z-index:1000;will-change:transform;visibility:hidden}.sidebar.open{transform:translateX(0);visibility:visible}.main{margin-right:0}.overlay{position:fixed;inset:0;width:100vw;height:100dvh;background:rgba(15,23,42,.48);backdrop-filter:blur(2px);z-index:999;display:block!important;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease}.overlay:not(.hidden){opacity:1;visibility:visible;pointer-events:auto}}
 @media (min-width:901px){.overlay{display:none!important}}
+
+/* Tool guide links */
+.card-open{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.card-guide{color:#4f46e5;text-decoration:none;font-size:9px;font-weight:800;padding:5px 8px;border:1px solid #e0e7ff;border-radius:7px;background:#f8f9ff}
+.card-guide:hover{background:#eef2ff}
+.dark .card-guide{color:#a5b4fc;background:#202452;border-color:#30366b}
+.tool-guide-page .guide-header{margin-top:22px}
+.tool-guide-page code{direction:ltr;unicode-bidi:plaintext;background:var(--soft);padding:2px 6px;border-radius:5px}
